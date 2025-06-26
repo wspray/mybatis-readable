@@ -134,6 +134,8 @@ public class AutomaticLazyLoadingTest {
    * Expect that the toString triggers lazy loading which loads the nested Element
    * is available after closing the session.
    */
+  //Idea在debug时打上断点没有用 Skipped breakpoint at ... because it happened inside debugger evaluation
+  // https://blog.csdn.net/ximaiyao1984/article/details/108759381    去掉debug的自动toString View
   private void testScenario(String aConfiguration, boolean anExpectingAnException, Method aMethodToCall)
   throws Exception {
     openSession(aConfiguration);
